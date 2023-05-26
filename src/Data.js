@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-function Data() {
-    const [airport, setAirport] = useState("");
-    const [airline, setAirline] = useState("");
-    const [date, setDate] = useState("");
-    const [flights, setFlights] = useState([]);
+function Data({ airport, setAirport, airline, setAirline, date, setDate, flights, setFlights }) {
 
     const url = `https://aviation-edge.com/v2/public/flightsHistory?key=80d26f-16e109&code=${airport}&type=arrival&date_from=${date}&airline_iata=${airline}`;
 
@@ -26,7 +22,7 @@ console.log(flights);
             <h1>Data Page</h1>
             <form>
                 <label>
-                    Airport:
+                    Arrival Airport:
                     <input
                         type="text"
                         value={airport}
@@ -59,7 +55,6 @@ console.log(flights);
                         <th>Flight Number</th>
                         <th>Departure Airport</th>
                         <th>Departure Time</th>
-                        <th>Arrival Airport</th>
                         <th>Arrival Time</th>
                     </tr>
                 </thead>
@@ -69,6 +64,8 @@ console.log(flights);
                             <td>{flight.airline.name}</td>
                             <td>{flight.flight.number}</td>
                             <td>{flight.departure.iataCode}</td>
+                            <td>{flight.departure.actualTime}</td>
+                            <td>{flight.arrival.actualTime}</td>
                         </tr>
                     ))}
                 </tbody>
