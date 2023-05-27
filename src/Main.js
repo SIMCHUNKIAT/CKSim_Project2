@@ -6,10 +6,12 @@ import Data from "./Data"
 import Analytics from "./Analytics"
 
 function Main() {
+    const flightsMemory = JSON.parse(localStorage.getItem('flights'))
+
     const [airport, setAirport] = useState("");
     const [airline, setAirline] = useState("");
     const [date, setDate] = useState("");
-    const [flights, setFlights] = useState([]);
+    const [flights, setFlights] = useState(flightsMemory);
 
     return (
         <div className="main">
@@ -20,7 +22,7 @@ function Main() {
                 <Route path="/analytics" element={<Analytics />} />
             </Routes>
         </div>
-        
+
     )
 }
 
