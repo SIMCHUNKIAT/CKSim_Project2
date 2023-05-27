@@ -1,14 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 
-function Product() {
+function Product({ partsList, setPartsList }) {
     const partNumberRef = useRef();
     const descriptionRef = useRef();
     const mtburRef = useRef();
     const partsListRef = useRef([]);
 
-const partsMemory = JSON.parse(localStorage.getItem('partsList'))
-
-    const [partsList, setPartsList] = useState(partsMemory);
+  
 
     const handleSubmit = (e) => {
         e.preventDefault();
