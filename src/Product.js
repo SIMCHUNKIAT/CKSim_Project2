@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Product() {
     const partNumberRef = useRef();
@@ -6,7 +6,9 @@ function Product() {
     const mtburRef = useRef();
     const partsListRef = useRef([]);
 
-    const [partsList, setPartsList] = useState([]);
+const partsMemory = JSON.parse(localStorage.getItem('partsList'))
+
+    const [partsList, setPartsList] = useState(partsMemory);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,6 +24,10 @@ function Product() {
         descriptionRef.current.value = "";
         mtburRef.current.value = "";
     };
+
+    useEffect(() => {
+        localStorage.setItem('partsList', JSON.stringify(partsList))
+    }, [partsList])
 
     return (
         <div>
