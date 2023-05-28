@@ -23,7 +23,7 @@ function Main() {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/product" element={<Product partsList={partsList} setPartsList={setPartsList} />} />
                 <Route path="/data" element={<Data flights={flights} setFlights={setFlights} airport={airport} setAirport={setAirport} airline={airline} setAirline={setAirline} date={date} setDate={setDate} />} />
-                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/analytics" element={<Analytics flights={flights} partsList={partsList} />} />
             </Routes>
         </div>
 
