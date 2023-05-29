@@ -6,8 +6,6 @@ function Product({ partsList, setPartsList }) {
     const mtburRef = useRef();
     const partsListRef = useRef([]);
 
-  
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const newPart = {
@@ -32,17 +30,17 @@ function Product({ partsList, setPartsList }) {
             <h2>Products Page</h2>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Part Number:
+                    Part Number :
                     <input type="text" ref={partNumberRef} />
                 </label>
                 <br />
                 <label>
-                    Description:
+                    Description   &nbsp; :
                     <input type="text" ref={descriptionRef} />
                 </label>
                 <br />
                 <label>
-                    MTBUR:
+                    MTBUR  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
                     <input type="text" ref={mtburRef} />
                 </label>
                 <br />

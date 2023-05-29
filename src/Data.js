@@ -11,18 +11,19 @@ function Data({ airport, setAirport, airline, setAirline, date, setDate, flights
             setFlights(data);
             // console.log(data);
             // console.log(data[0].airline);
+            localStorage.setItem('flights', JSON.stringify(flights))
         };
 
         fetchData();
-    
+
     }, [airport, airline, date]);
-console.log(flights);
+    console.log(flights);
     return (
         <div>
             <h1>Data Page</h1>
             <form>
                 <label>
-                    Arrival Airport:
+                    Arrival Airport  :
                     <input
                         type="text"
                         value={airport}
@@ -31,7 +32,7 @@ console.log(flights);
                 </label>
                 <br />
                 <label>
-                    Airline:
+                    Airline  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
                     <input
                         type="text"
                         value={airline}
@@ -40,38 +41,42 @@ console.log(flights);
                 </label>
                 <br />
                 <label>
-                    Date:
+                    Date  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
                     <input
                         type="text"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
                     />
                 </label>
-            </form> 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Airline</th>
-                        <th>Flight Number</th>
-                        <th>Departure Airport</th>
-                        <th>Departure Time</th>
-                        <th>Arrival Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {Array.isArray(flights) && flights.map((flight, index) => (
-                        <tr key={index}>
-                            <td>{flight.airline.name}</td>
-                            <td>{flight.flight.number}</td>
-                            <td>{flight.departure.iataCode}</td>
-                            <td>{flight.departure.actualTime}</td>
-                            <td>{flight.arrival.actualTime}</td>
+            </form>
+            <br></br>
+            <div className="table-container">
+                <table className="table">
+                    <thead className="thead">
+                        <tr className="trHead">
+                            <th className="th">Airline</th>
+                            <th className="th">Flight Number</th>
+                            <th className="th">Departure Airport</th>
+                            <th className="th">Departure Time</th>
+                            <th className="th"> Arrival Time</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody className="tBody">
+                        {Array.isArray(flights) && flights.map((flight, index) => (
+                            <tr key={index} className="trBody">
+                                <td className="td">{flight.airline.name}</td>
+                                <td className="td">{flight.flight.number}</td>
+                                <td className="td">{flight.departure.iataCode}</td>
+                                <td className="td">{flight.departure.actualTime}</td>
+                                <td className="td">{flight.arrival.actualTime}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-    ); 
+    );
 }
 
 export default Data;
