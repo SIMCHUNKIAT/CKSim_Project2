@@ -47,6 +47,9 @@ Problems encountered as well as the solutions found are detailed below:
 
 1. CSS to 'beautify the application'.
 2. Drop down selection for input fields.
+3. Log in screen.
+4. Option to save the product lists into a server and use for later.
+5. Option to export Analytics page into excel.
 
 ---
 
