@@ -9,7 +9,7 @@ const FlightHoursCalculator = ({ flights, partsList }) => {
 
         let totalFlightHours = 0;
 
-        flights.forEach((flight) => {
+        Array.isArray(flights) && flights.forEach((flight) => {
             const departureTimeStr = flight.departure && flight.departure.actualTime;
             const arrivalTimeStr = flight.arrival && flight.arrival.actualTime;
 

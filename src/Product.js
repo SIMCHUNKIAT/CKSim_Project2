@@ -6,8 +6,6 @@ function Product({ partsList, setPartsList }) {
     const mtburRef = useRef();
     const partsListRef = useRef([]);
 
-  
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const newPart = {
@@ -28,34 +26,37 @@ function Product({ partsList, setPartsList }) {
     }, [partsList])
 
     return (
-        <div>
-            <h2>Products Page</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Part Number:
-                    <input type="text" ref={partNumberRef} />
-                </label>
-                <br />
-                <label>
-                    Description:
-                    <input type="text" ref={descriptionRef} />
-                </label>
-                <br />
-                <label>
-                    MTBUR:
-                    <input type="text" ref={mtburRef} />
-                </label>
-                <br />
-                <button type="submit">Add Part</button>
-            </form>
-            <ol>
-                {partsList.map((part, index) => (
-                    <li key={index}>
-                        Part Number: {part.partNumber}, Description: {part.description}, MTBUR: {part.mtbur}
-                    </li>
-                ))}
-            </ol>
+        <div className="background">
+            <div className="components">
+                <h2>Products Page</h2>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        Part Number :
+                        <input type="text" ref={partNumberRef} />
+                    </label>
+                    <br />
+                    <label>
+                        Description   &nbsp; :
+                        <input type="text" ref={descriptionRef} />
+                    </label>
+                    <br />
+                    <label>
+                        MTBUR  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+                        <input type="text" ref={mtburRef} />
+                    </label>
+                    <br />
+                    <button type="submit">Add Part</button>
+                </form>
+                <ol>
+                    {partsList.map((part, index) => (
+                        <li key={index}>
+                            Part Number: {part.partNumber}, Description: {part.description}, MTBUR: {part.mtbur}
+                        </li>
+                    ))}
+                </ol>
+            </div>
         </div>
+
     );
 }
 

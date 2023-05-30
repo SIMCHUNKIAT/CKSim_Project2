@@ -11,3 +11,59 @@
   padding-right: 30px;
 }
 
+.main {
+  color: white;
+  margin: 0px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.thead {
+  position: sticky;
+  z-index: 100;
+}
+
+.trHead {
+  background: var(--bg);
+}
+
+.th {
+  font-weight: normal;
+  padding: var(--sm-spacing);
+  color: var(--text);
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.trBody {
+  background: var(--white);
+}
+
+.td {
+  padding: var(--sm-spacing);
+  border: 1px solid var(--bg2);
+  font-size: 14px;
+}
+
+.home {
+  margin: 20px;
+  padding: 20px;
+}
+
+.components {
+  background: rgb(92, 90, 90);
+  height: max-content;
+  padding: 20px;
+}
+
+.background {
+  background:rgb(92, 90, 90);
+  height: 779px;
+}
