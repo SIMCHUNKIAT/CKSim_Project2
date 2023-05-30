@@ -48,7 +48,7 @@ function Product({ partsList, setPartsList }) {
                     <button type="submit">Add Part</button>
                 </form>
                 <ol>
-                    {partsList.map((part, index) => (
+                    {Array.isArray(partsList) && partsList.map((part, index) => (
                         <li key={index}>
                             Part Number: {part.partNumber}, Description: {part.description}, MTBUR: {part.mtbur}
                         </li>
