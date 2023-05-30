@@ -13,7 +13,7 @@
 
 .main {
   color: white;
-  margin: 10px;
+  margin: 0px;
 }
 
 .table {
@@ -50,4 +50,20 @@
   padding: var(--sm-spacing);
   border: 1px solid var(--bg2);
   font-size: 14px;
+}
+
+.home {
+  margin: 20px;
+  padding: 20px;
+}
+
+.components {
+  background: rgb(92, 90, 90);
+  height: max-content;
+  padding: 20px;
+}
+
+.background {
+  background:rgb(92, 90, 90);
+  height: 779px;
 }
