@@ -4,10 +4,10 @@ import React from 'react';
 
 function PieChart({ totalHours, partsList }) {
     const pieChartData = {
-        labels: partsList.map((data) => data.partNumber),
+        labels: Array.isArray(partsList) && partsList.map((data) => data.partNumber),
         datasets: [{
             label: "Market Size",
-            data: partsList.map((data) => totalHours / data.mtbur),
+            data: Array.isArray(partsList) && partsList.map((data) => totalHours / data.mtbur),
         },
         ],
     };
