@@ -13,7 +13,8 @@ The following technologies were used in the building of this application:
 
 ## Wireframes
 
-XXXXXXXXXXXXXXXXXXXXXXXXXX
+![IMG_20230530_113941](https://github.com/SIMCHUNKIAT/CKSim_Project2/assets/126931095/7ea1c48a-5fdb-430d-8a53-8ff8020a2514)
+
 
 ## User Stories
 
