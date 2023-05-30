@@ -63,6 +63,7 @@ Problems encountered as well as the solutions found are detailed below:
 
 1. [Aviation Edge](https://aviation-edge.com/) for providing the API key and allowing me to use their product on a complementary basis for the application of this project.
 2. The instructors and TAs from General Assembly who have patiently supported and guided me along this learning journey so far.
+3. Theresa Nguyen for her free stock video.
 
 ---
 # References
